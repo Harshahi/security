@@ -1,0 +1,37 @@
+Cracking Passwords on Linux Systems:
+
+Top 1000000 passwords: https://raw.githubusercontent.com/danielmiessler/SecLists/master/Passwords/Common-Credentials/10-million-password-list-top-1000000.txt
+
+4GB password dictionary: 64 million passwords: https://crackstation.net/crackstation-wordlist-password-cracking-dictionary.htm 
+
+rockyou dictionary: https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt
+
+CrackStation.  For MD5 and SHA1 hashes, there is a 190GB, 15-billion-entry lookup table, and for other hashes, they offer a 19GB 1.5-billion-entry lookup table.
+
+- /etc/passwd is a text file that contains the attributes of (i.e., basic information about) each user or account on a computer running Linux or another Unix-like operating system. http://www.linfo.org/etc_passwd.html
+
+- /etc/shadow file stores actual password in encrypted format (more like the hash of the password) for user’s account with additional properties related to user password.  https://www.cyberciti.biz/faq/understanding-etcshadow-file/
+
+- tail –n -4 /etc/shadow: displays last 4 lines (tail) of the file shadow
+
+- John the Ripper is a fast password cracker, currently available for many flavors of Unix, macOS, Windows, DOS, BeOS, and OpenVMS. https://www.openwall.com/john/    https://tools.kali.org/password-attacks/john
+
+- Hashcat - Hashcat is the self-proclaimed world's fastest password recovery tool. It had a proprietary code base until 2015, but is now released as open source software. https://hashcat.net/hashcat/
+
+- ProFTPD is an FTP server. ProFTPD is Free and open-source software, compatible with Unix-like systems and Microsoft Windows. Along with vsftpd and Pure-FTPd, ProFTPD is among the most popular FTP servers in Unix-like environments today. http://www.proftpd.org/ 
+
+- running the command "proftpd" starts the ftp server.
+
+- johnny is the GUI for John the Ripper https://openwall.info/wiki/john/johnny
+
+
+//To Do Next
+1. Download either of the password dictionaries presented earlier in this document, or another of your choice.
+2. Download and install hashcat and/or johnny on your computer (VM). 
+3. Using your choice (compatible) of hashing scheme generate a test shadow file with a few password hashes. Be certain that the password is present in the dictionary you have downloaded.
+4. Employ hashcat or johnny to crack the password by providing the dictionary and shadow file. Measure time it takes to break it.
+5. Record a screen capture video to demonstrate your understanding and working of the above steps (not more than 3 mins long). You can use https://screencast-o-matic.com/screen-recorder for screen recording.
+6. Submit this video on the blackboard.
+
+Assignment Deadline: End of day September 6, 2020.
+Points: 50
